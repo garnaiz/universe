@@ -1,0 +1,9 @@
+{
+  "assets": {
+    "container": {
+      "docker": {
+        "3ae7e33d873f": "c3server:latest"
+      }
+    }
+  }
+}

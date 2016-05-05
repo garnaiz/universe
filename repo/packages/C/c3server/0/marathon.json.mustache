@@ -1,0 +1,45 @@
+{
+  "id": "/stage-docker/c3server",
+  "cmd": null,
+  "cpus": 4,
+  "mem": 7000,
+  "disk": 0,
+  "instances": 1,
+  "acceptedResourceRoles": [
+    "slave_public"
+  ],
+  "container": {
+    "type": "DOCKER",
+    "volumes": [],
+    "docker": {
+      "image": "836860439671.dkr.ecr.us-west-2.amazonaws.com/c3.server:latest",
+      "network": "BRIDGE",
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "hostPort": 8080,
+          "protocol": "tcp"
+        },
+        {
+          "containerPort": 8088,
+          "hostPort": 8088,
+          "protocol": "tcp"
+        }
+      ],
+      "privileged": false,
+      "parameters": []
+    }
+  },
+  "healthChecks": [
+    {
+      "protocol": "HTTP",
+      "port": 8080,
+      "path": "/health",
+      "gracePeriodSeconds": 60,
+      "intervalSeconds": 30,
+      "portIndex": 0,
+      "timeoutSeconds": 10,
+      "maxConsecutiveFailures": 3
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "packagingVersion": "2.0",
+  "name": "c3server",
+  "version": "5.5.9",
+  "tags": ["c3iot", "c3server", "stage-docker"],
+  "maintainer": "gilberto.arnaiz@c3iot.com",
+  "description": "c3server POC",
+  "scm": "https://github.com/c3-e/c3server",
+  "website": "http://c3iot.com",
+  "preInstallNotes": "This c3server container can only work in the stage-pass VPC (AWS)",
+  "postInstallNotes": "c3server installed",
+  "postUninstallNotes": "c3server uninstalled",
+  "framework": false,
+  "licenses": [
+    {
+      "name": "(c) Copyright 2016 C3 IoT. All Rights Reserved.",
+      "url": "http://www.c3iot.com/legal"
+    }
+  ]
+}
